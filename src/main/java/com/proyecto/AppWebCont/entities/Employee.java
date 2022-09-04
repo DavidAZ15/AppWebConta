@@ -17,8 +17,7 @@ public class Employee {
     @Column(name = "Rol")
     private EnumRoleName role;
 
-    //@Column(name = "Perfil")
-    //private Profile profile;
+
 
 
 

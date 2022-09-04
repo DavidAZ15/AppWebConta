@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Enterprise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)// acá estamos autogenerando el id de la tabla
-    private long id;
+    private int id;
 
     @Column(name = "Nombre")
     private String name;
@@ -23,11 +23,13 @@ public class Enterprise {
     @Column(name = "direccion")
     private String address;
 
-    public long getId() {
+    public int getId() {
+
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
+
         this.id = id;
     }
 
@@ -36,10 +38,12 @@ public class Enterprise {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getDocument() {
+
         return document;
     }
 
