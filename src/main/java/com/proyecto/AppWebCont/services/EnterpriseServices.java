@@ -13,11 +13,13 @@ public class EnterpriseServices {
 
     private IEnterpriseRepository enterpriseRepository;
     public EnterpriseServices(IEnterpriseRepository repEnterprise){
+
         this.enterpriseRepository=repEnterprise;
     }
 
     // creamos este metodo para traer todos los datos de la tabla empresas
     public ArrayList<Enterprise> selectAll(){
+
         return (ArrayList<Enterprise>) this.enterpriseRepository.findAll();
     }
 

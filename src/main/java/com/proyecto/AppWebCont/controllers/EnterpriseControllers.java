@@ -11,9 +11,6 @@ import java.util.ArrayList;
 @RestController // como vasmos a recibir y generar datos de manera plana"json" lo vamos  a llamar servicios rest
 @RequestMapping("enterprise") // genero con esta etiqueta el ruteo o la URL que va llevar este controlador
 public class EnterpriseControllers {
-
-
-
     private EnterpriseServices enterpriseservice;
     public EnterpriseControllers(EnterpriseServices serEnterprise){
         this.enterpriseservice=serEnterprise;
@@ -24,11 +21,11 @@ public class EnterpriseControllers {
         return this.enterpriseservice.selectAll();
     }
     //metodo para consultar una sola empresa
-    @RequestMapping("get/enterprise/{id}")
+    @RequestMapping("get/{id}")
     public Enterprise getenterprise(@PathVariable int id){
         return this.enterpriseservice.selectById(id);
     }
-    //metodo para crear una empresa
+    //controlador para crear una empresa
     @PostMapping("create")
     private Response createenterprise(@RequestBody Enterprise newEnterprise){
         return this.enterpriseservice.createEnterprise(newEnterprise);
@@ -36,6 +33,11 @@ public class EnterpriseControllers {
     @DeleteMapping("delete/{id}")
     public Response deleteEnterprise(@PathVariable int id){
         return this.enterpriseservice.deleteEnterpriseById(id);
+    }
+
+    @PutMapping("update")
+    public Response updateEnterprise(@RequestBody Enterprise updateNewEnterprise){
+        return this.enterpriseservice.updateEnterprise(updateNewEnterprise);
     }
 
 }
