@@ -3,7 +3,6 @@ package com.proyecto.AppWebCont.controllers;
 import com.proyecto.AppWebCont.entities.Enterprise;
 import com.proyecto.AppWebCont.services.EnterpriseServices;
 import com.proyecto.AppWebCont.services.Response;
-import net.bytebuddy.asm.Advice;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -31,12 +30,14 @@ public class EnterpriseControllers {
         return this.enterpriseservice.createEnterprise(newEnterprise);
     }
     @DeleteMapping("delete/{id}")
-    public Response deleteEnterprise(@PathVariable int id){
+    public Response deleteEnterprise(@PathVariable int id)
+    {
         return this.enterpriseservice.deleteEnterpriseById(id);
     }
 
     @PutMapping("update")
-    public Response updateEnterprise(@RequestBody Enterprise updateNewEnterprise){
+    public Response updateEnterprise(@RequestBody Enterprise updateNewEnterprise)
+    {
         return this.enterpriseservice.updateEnterprise(updateNewEnterprise);
     }
 

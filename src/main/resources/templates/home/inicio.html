@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{master}">
+
+<head></head>
+
+<body>
+<div layout:fragment="content">
+    <div class="container-fluid">
+        <div class="flex-column align-items-center justify-content-center">
+            <h1 class="h3 mb-0 text-black-50 text-center">Seleccione una opción</h1>
+        </div>
+        <br>
+        <div class="card border-left-success shadow h-100 py-3">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <a href="/sgingresos" class="btn btn-success btn-icon-split btn-lg">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                            <span class="text">Sistema de gestión de ingresos y gastos</span>
+                        </a>
+
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-black-50-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card border-left-primary shadow h-100 py-3">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <a href="sgusuarios" class="btn btn-primary btn-icon-split btn-lg">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                            <span class="text">Sistema de gestión de usuarios</span>
+                        </a>
+
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card border-left-warning shadow h-100 py-3">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <a href="sgempresas" class="btn btn-warning btn-icon-split btn-lg">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                            <span class="text">Sistema de gestión de empresas</span>
+                        </a>
+
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

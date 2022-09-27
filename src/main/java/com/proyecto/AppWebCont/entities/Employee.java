@@ -37,4 +37,12 @@ public class Employee {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public EnumRoleName getRole() {
+        return role;
+    }
+
+    public void setRole(EnumRoleName role) {
+        this.role = role;
+    }
 }

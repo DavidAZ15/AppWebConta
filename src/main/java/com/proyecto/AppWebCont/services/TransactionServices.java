@@ -22,7 +22,7 @@ public class TransactionServices {
     }
 
     public Transaction selectById(int Id){
-        Optional<Transaction> existeMovimiento=this.transactionRepository.findById(Id);
+        Optional<Transaction> existeMovimiento=transactionRepository.findById(Id);
         if(existeMovimiento.isPresent()){
             return existeMovimiento.get();
         }
@@ -35,7 +35,7 @@ public class TransactionServices {
         Response response=new Response();
         this.transactionRepository.save(newData);
         response.setCode(200);
-        response.setMessage("Empresa registrada existosamente");
+        response.setMessage("Movimiento registrado existosamente");
         return response;
     }
 

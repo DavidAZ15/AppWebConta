@@ -1,6 +1,6 @@
 package com.proyecto.AppWebCont.controllers;
 
-import com.proyecto.AppWebCont.entities.Enterprise;
+
 import com.proyecto.AppWebCont.entities.Transaction;
 import com.proyecto.AppWebCont.services.Response;
 import com.proyecto.AppWebCont.services.TransactionServices;
@@ -22,10 +22,11 @@ public class TransactionControllers {
         return this.transactionservices.selectAll();
     }
 
-    @RequestMapping("{id}")
-    public Transaction gerTransaction(@PathVariable int id){
+    @RequestMapping("get/{id}")
+    public Transaction gettransaction(@PathVariable int id){
         return this.transactionservices.selectById(id);
     }
+
 
     @PostMapping("create")
     private Response createTransaction(@RequestBody Transaction newTransaction){
@@ -36,4 +37,7 @@ public class TransactionControllers {
     public Response deleteTransaction(@PathVariable int id){
         return this.transactionservices.deleteTransactionById(id);
     }
+
+
+
 }
