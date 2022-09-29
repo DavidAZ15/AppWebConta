@@ -20,4 +20,19 @@ public class PaginasControllers {
     public String sgempresas(){
         return "empresas/empresas";
     }
+
+    @GetMapping("sgnuevousuario")
+    public String sgnuevousuario(){
+        return "usuarios/nuevousuario";
+    }
+
+    @GetMapping("sgnuevomovimiento")
+    public String sgnuevomovimiento(){
+        return "movimientos/Nuevoingreso";
+    }
+
+    @GetMapping("sgnuevaempresa")
+    public String sgnuevaempresa(){
+        return "empresas/nuevaempresa";
+    }
 }
